@@ -1,0 +1,164 @@
+﻿<UserControl x:Class="CuencaMovilDesktop.UserControls.UserControlDashboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CuencaMovilDesktop.UserControls"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="810" d:DesignWidth="1200">
+   
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--Estadísticas-->
+        <StackPanel Grid.Row="0"
+                    FlowDirection="LeftToRight"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+
+            <Border Style="{StaticResource panelStyle1}" 
+                    Width="230"
+                    Height="130"
+                    Margin="60,0,0,10">
+                <StackPanel Margin="10,10,5,0"
+                            Style="{StaticResource panelFontStyle}">
+                    <Label Content="Total reportes"                          
+                           FontWeight="SemiBold"                         
+                           Margin="0,0,0,15"/>
+
+                    <Label x:Name="lblTotalPedidos"
+                           FontWeight="Bold"
+                           Foreground="White">Cantidad</Label>
+
+                    <Label x:Name="lblUpdate1"
+                           Foreground="White"
+                           FontSize="12">Update</Label>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource panelStyle2}" 
+                     Width="230"
+                    Height="130"
+                    Margin="40,0,0,10">
+                <StackPanel Margin="10,10,5,0"
+                            Style="{StaticResource panelFontStyle}">
+                    <Label Content="Total incidencias"                          
+                           FontWeight="SemiBold"                          
+                           Margin="0,0,0,15"/>
+
+                    <Label x:Name="lblTotalProductos"
+                           FontWeight="Bold"
+                           Foreground="White">Cantidad</Label>
+
+                    <Label x:Name="lblUpdate2"
+                           Foreground="White"
+                           FontSize="12">Update</Label>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource panelStyle3}" 
+                      Width="230"
+                    Height="130"
+                    Margin="40,0,0,10">
+                <StackPanel Margin="10,10,5,0"
+                            Style="{StaticResource panelFontStyle}">
+                    <Label Content="Total peticiones"                          
+                           FontWeight="SemiBold"                        
+                           Margin="0,0,0,15"/>
+
+                    <Label x:Name="lblEurosPedidos"
+                           FontWeight="Bold"
+                           Foreground="White">Cantidad</Label>
+
+                    <Label x:Name="lblUpdate3"
+                           Foreground="White"
+                           FontSize="12">Update</Label>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource panelStyle4}" 
+                      Width="230"
+                    Height="130"
+                    Margin="40,0,0,10">
+                <StackPanel Margin="10,10,5,0"
+                            Style="{StaticResource panelFontStyle}">
+                    <Label Content="Total usuarios"
+                           FontWeight="SemiBold"                             
+                           Margin="0,0,0,15"/>
+
+                    <Label x:Name="lblEurosUsuario"
+                           FontWeight="Bold"
+                           Foreground="White">Cantidad</Label>
+
+                    <Label x:Name="lblUpdate4"
+                           Foreground="White"
+                           FontSize="12">Update</Label>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        
+        <!--Gráficas-->
+        <StackPanel Grid.Row="1"                 
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="0,40,0,0">
+            
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top">
+                <Label FontFamily="Montserrat"
+                       FontSize="20"
+                       Foreground="White"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10">Total productos por categoría</Label>
+                <!--<lvc:PieChart x:Name="pieChart"                         
+                              Width="500"
+                              Height="300"
+                              Margin="0,0,70,0"
+                              LegendLocation="Left">
+                    <lvc:PieChart.ChartLegend>
+                        <lvc:DefaultLegend BulletSize="20"
+                                           Foreground="White"
+                                           FontSize="16">
+                        </lvc:DefaultLegend>
+                    </lvc:PieChart.ChartLegend>
+                    <lvc:PieChart.DataTooltip>
+                        <lvc:DefaultTooltip SelectionMode="OnlySender"
+                                            FontSize="16"/>
+                    </lvc:PieChart.DataTooltip>
+                </lvc:PieChart>-->
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top">
+                <Label FontFamily="Montserrat"
+                       FontSize="20"
+                       Foreground="White"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10">Total pedidos por cliente</Label>
+                <!--<lvc:CartesianChart x:Name="columnChart"
+                                Series="{Binding chartOrdersCustomer}"
+                                Width="500"
+                                Height="300">
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Clientes"></lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="Cantidad de pedidos por cliente"></lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+                <lvc:CartesianChart.DataTooltip>
+                    <lvc:DefaultTooltip SelectionMode="OnlySender" 
+                                        FontSize="16"/>
+                </lvc:CartesianChart.DataTooltip>
+            </lvc:CartesianChart>-->
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</UserControl>

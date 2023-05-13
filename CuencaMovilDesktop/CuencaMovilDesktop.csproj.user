@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="WinMessageInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\UserControlClubForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\UserControlClubsList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\UserControlReportDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\UserControlReportsList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="DashboardWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinMessageInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\LabelStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\MenuDesplegableStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\PanelStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\TextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\UIColors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\UserControlClubForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\UserControlClubsList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\UserControlDashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\UserControlReportDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\UserControlReportsList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WinAskCloseApp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

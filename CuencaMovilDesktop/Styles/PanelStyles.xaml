@@ -1,0 +1,72 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="panelStyle1" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="{StaticResource backColor4}" Offset="1"/>
+                    <GradientStop Color="{StaticResource secondaryBackColor1}" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="CornerRadius" Value="16"></Setter>
+    </Style>
+
+    <Style x:Key="panelStyle2" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="{StaticResource backColor1}" Offset="1"/>
+                    <GradientStop Color="{StaticResource secondaryBackColor1}" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="CornerRadius" Value="16"></Setter>
+    </Style>
+
+    <Style x:Key="panelStyle3" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="{StaticResource backColor7}" Offset="1"/>
+                    <GradientStop Color="{StaticResource secondaryBackColor1}" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="CornerRadius" Value="16"></Setter>
+    </Style>
+
+    <Style x:Key="panelStyle4" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="{StaticResource backColor3}" Offset="1"/>
+                    <GradientStop Color="{StaticResource secondaryBackColor1}" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="CornerRadius" Value="16"></Setter>
+    </Style>
+
+    <Style x:Key="panelFontStyle" TargetType="StackPanel">
+        <Style.Resources>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Montserrat">
+                </Setter>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Montserrat"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="FontFamily" Value="Montserrat"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <Style x:Key="winStyle" TargetType="Window">
+        <Setter Property="FontFamily" Value="Montserrat"/>
+    </Style>
+</ResourceDictionary>

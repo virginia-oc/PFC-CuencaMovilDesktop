@@ -1,0 +1,15 @@
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\bin\Debug\net6.0-windows\Datos.deps.json
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\bin\Debug\net6.0-windows\Datos.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\bin\Debug\net6.0-windows\Datos.pdb
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\bin\Debug\net6.0-windows\Entidades.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\bin\Debug\net6.0-windows\Entidades.pdb
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\obj\Debug\net6.0-windows\Datos.csproj.AssemblyReference.cache
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\obj\Debug\net6.0-windows\Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\obj\Debug\net6.0-windows\Datos.AssemblyInfoInputs.cache
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\obj\Debug\net6.0-windows\Datos.AssemblyInfo.cs
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\obj\Debug\net6.0-windows\Datos.csproj.CoreCompileInputs.cache
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\obj\Debug\net6.0-windows\Datos.csproj.CopyComplete
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\obj\Debug\net6.0-windows\Datos.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\obj\Debug\net6.0-windows\refint\Datos.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\obj\Debug\net6.0-windows\Datos.pdb
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Datos\obj\Debug\net6.0-windows\ref\Datos.dll

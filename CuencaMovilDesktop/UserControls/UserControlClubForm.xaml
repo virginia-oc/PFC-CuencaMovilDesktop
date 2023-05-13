@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="CuencaMovilDesktop.UserControls.UserControlClubForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CuencaMovilDesktop.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="810" d:DesignWidth="1200">
+    
+    <StackPanel  x:Name="panel" Grid.Column="1"                   
+                     Style="{StaticResource panelFontStyle}"
+                     Margin="60,0,60,20">
+        <Label Style="{StaticResource titleLabel}"
+                   Margin="0,0,0,10">Crear nueva asociación</Label>
+
+        <Border Background="{StaticResource panelOverColor}"
+                    CornerRadius="20"
+                    Padding="0,0,0,20">
+            <Grid x:Name="form">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0"
+                                Margin="30">
+
+                    <DockPanel>
+                        <Label Style="{StaticResource fieldLabel}">Nombre * :</Label>
+
+                        <TextBox x:Name="txtName"                              
+                                Style="{StaticResource textBoxStyle1}">
+                        </TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label Style="{StaticResource fieldLabel}">Categoría * :</Label>
+                        <TextBox x:Name="txtCategory"
+                              Style="{StaticResource textBoxStyle1}">
+                        </TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label Style="{StaticResource fieldLabel}">Teléfono de contacto:</Label>
+                        <TextBox x:Name="txtPhone"
+                              Style="{StaticResource textBoxStyle1}">
+                        </TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label Style="{StaticResource fieldLabel}">Email * :</Label>
+                        <TextBox x:Name="txtEmail"
+                              Style="{StaticResource textBoxStyle1}">
+                        </TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label Style="{StaticResource fieldLabel}">Sitio web:</Label>
+                        <TextBox x:Name="txtWebsite"
+                              Style="{StaticResource textBoxStyle1}">
+                        </TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label Style="{StaticResource fieldLabel}">Fotos adjuntas:</Label>
+                    </DockPanel>
+
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                        <StackPanel Orientation="Horizontal">
+                            <Rectangle x:Name="fotoEmp" Height="130" Width="130"
+                                    Stroke="{StaticResource color2}"
+                                    StrokeThickness="2"
+                                    Margin="0,0,20,0">
+                                <Rectangle.Fill>
+                                    <ImageBrush x:Name ="imagenFoto" ImageSource="{Binding Photo}"/>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1"
+                            Orientation="Vertical"
+                            Margin="30">
+                    <DockPanel>
+                        <Label Style="{StaticResource fieldLabel}">Descripción*:</Label>
+
+                        <TextBox x:Name="tbDescription"
+                                 Background="{StaticResource titleColor2}"
+                                 Margin="5,10,0,0"
+                                 Height="154"
+                                 Text="{Binding Notes}" 
+                                 TextWrapping="Wrap"></TextBox>
+                    </DockPanel>
+                </StackPanel>
+            </Grid>
+
+        </Border>
+
+        <Button x:Name="BtnSaveData"
+                Style="{StaticResource btnStyle1}"                             
+                Margin="30, 10, 30, 0"
+                Width="500"
+                Content="Guardar datos" Click="BtnSaveData_Click"/>
+    </StackPanel>
+</UserControl>

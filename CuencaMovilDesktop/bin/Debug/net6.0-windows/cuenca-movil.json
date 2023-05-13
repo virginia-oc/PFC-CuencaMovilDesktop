@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cuenca-movil-22b63",
+  "private_key_id": "c5e208e9fe88612da09907d15169b069a9a3d17b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDGlQm2Fqay2uCT\nc2ZsIGApAh+Pd4aoRgv1ngmkV7po2gz9IWYXCZHCuYQD+SREjpVnVvyi2hC2I8lw\nreePlLPpNj88wlHgok2CVykX3KVHCH1IpqHrHlqlh4C5DN3Jo+l8I1g0zQdzKj1H\nBGybRQoBadJLkyCvjE8EZUCF3RPsK/P3UB+iMY7jhID67uAHfNsZhQmi5M2D4TlU\ndpPImzVcbzbA+dbxfWCbxAoy3N9XevBx2bWwyulEiFYyLweIFN2/EifyvZZ1j8XI\nxo/JYmkOqHX4pmNYRnUMoq33NMf7izmsJrSGl2dgTSJ6077Krybqbi2zbDsQ8sDF\nB9kzs4tTAgMBAAECggEAH6Qdq61zmun0gJS8TBw4gNroFnRQDhM4fUaqI00gfuvH\ncrSApMkPODyrrp+4Sf2CDA44gOZIEA18X6owoZhrC4zA32Mtp/eUbAvhQ1O9OKfp\n9nUpNY0Hmnplu0Ez5u4UGjCI3G49cqSB+6/WckMPiLweGDv1faMt7/Ww0I4ySh31\njIhVd6x34NsOECdchUJNpgcQoX+k8qeJGlCos5dCj6q9U/c7nC64UskRaQBXvf0X\nfG3MXWH/TTbhP36huc9oqtEdst8FyHDMK6SrEwvulpTb3KNvBQvgaIIf/Thftn6g\nl9fmzYbO2UK17bRYIWIr20Cxx82W/GXMzErq7Y0HKQKBgQDkvgkxTXDLvnDIJheL\nAT5wMbZ6x4f7ILBG5LnKGi5Qy4LRBBZZGBG63M7UGfPHWxubDoE8CfQVqwjeUEwW\n7dIUu70dMikNC3m91H2XhEfK7EfDmMsmreCGhhVRKC0g+FlSmgPFBj13hhD3G/Ze\n2BZECz7EjeKtNrDDikW6nfk1XQKBgQDePvFrq8KpNSLqXTgaaKMruH+xCtWZZdGg\nz7azCgZVC6IImA+GGdKy11l1fjDEaYcvK/2XwJ7l28icilPxcyWkC8/Nryolx6PB\nz/9r+WQ49Dp5aZs6Gq6gLCiGn7S1qOEa8UYAY+oi+Vb8HmxDjp1/WC4/3+uY3llU\n1nrpoLyIbwKBgQCQKLA0cUDQNzJvAYq+4UbPgJUnpg6uFzjhRQ9OLtfXtZq5TeEj\nv0aVRMnY5I49qs6oFykdhIxfB46sRWDe5n0K8hLKjq1Oelf8ainIzuZMHkNQI0CN\nHPIu9dwDbNWcPMhWhZgwmLEuXcDda7MGrRrDQW8Kgv1D+v7GDaPKa/r+RQKBgQCy\nB1W43GQYy1nmxzmz3fIniamwFm+4a5ma6gj+Lp+X7LOlkrmMwI7JeDxPJADItYf2\nv5RqxYADvSVcUGqh1Y1ndZbGuvRWQy/oh0eiJKql/O4CaBhSWSFdaUIlZTWK93cq\n7+8VTPQ3g+isGWq8Szfa1LZnsGW3lRWWIiFfmMStvQKBgQCw4FxaJLXgrsneIGHc\n+awhUSOL8Cnur3XTkH0VRYoYZa+8Av9MhOVzSElCLZ5RnAD4AvjpTaY1AkBZSkgB\naDKzTTajfAls0stszosTl+CxJmusxPwk29LFaL/6ayhLobaETdI9F77M/QGTWCNE\nBByA9VV/WiR9fSaOUFilYyIlag==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-6hb2z@cuenca-movil-22b63.iam.gserviceaccount.com",
+  "client_id": "109789711256374030424",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-6hb2z%40cuenca-movil-22b63.iam.gserviceaccount.com"
+}

@@ -1,0 +1,12 @@
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\bin\Debug\net6.0-windows\Entidades.deps.json
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\bin\Debug\net6.0-windows\Entidades.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\bin\Debug\net6.0-windows\Entidades.pdb
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\obj\Debug\net6.0-windows\Entidades.csproj.AssemblyReference.cache
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\obj\Debug\net6.0-windows\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\obj\Debug\net6.0-windows\Entidades.AssemblyInfoInputs.cache
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\obj\Debug\net6.0-windows\Entidades.AssemblyInfo.cs
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\obj\Debug\net6.0-windows\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\obj\Debug\net6.0-windows\Entidades.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\obj\Debug\net6.0-windows\refint\Entidades.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\obj\Debug\net6.0-windows\Entidades.pdb
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Entidades\obj\Debug\net6.0-windows\ref\Entidades.dll
