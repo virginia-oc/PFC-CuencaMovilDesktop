@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using Google.Cloud.Firestore;
-using System.Windows;
-using System.Collections;
 
 namespace Datos
 {
@@ -14,7 +12,7 @@ namespace Datos
         bool disposed;
         private static string projectId = "cuenca-movil-22b63";      
         private string collectionName = "reports";
-        FirestoreDb firestoredb;
+        FirestoreDb firestoredb; 
 
         public ReportADO() 
         {
@@ -33,7 +31,7 @@ namespace Datos
         {
             CollectionReference collection = firestoredb.Collection(collectionName);
             QuerySnapshot allReports = await collection.GetSnapshotAsync();
-            List<Report> reportsList = new List<Report>();          
+            List<Report> reportsList = new List<Report>();
 
             foreach (DocumentSnapshot document in allReports.Documents)
             {
@@ -43,7 +41,7 @@ namespace Datos
             }
 
             return reportsList;
-        }
+        }      
 
         async void GetReportById(string documentId)
         {

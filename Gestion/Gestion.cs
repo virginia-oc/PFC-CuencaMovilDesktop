@@ -2,6 +2,7 @@ using Datos;
 using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 public class Gestion
@@ -10,15 +11,22 @@ public class Gestion
     {
     }
         
-    public static List<Report> GetAllReports()
+    public static async Task<List<Report>> GetAllReports()
     {
-        List<Report> reportsList = new List<Report>();
-        Task<List<Report>> reportsTask;
+        List<Report> reportsList;
+        //Task<List<Report>> reportsTask;
+
         using (ReportADO reportADO = new ReportADO())
         {
-            reportsTask = reportADO.GetAllReportsAsync();
-
+            //reportsTask = reportADO.GetAllReportsAsync();
+            reportsList = new List<Report>(await reportADO.GetAllReportsAsync()); 
+            Debug.WriteLine(reportsList.Count);
         }
+
+        foreach (Report report in reportsList) 
+        {
+            Debug.WriteLine(report);
+                }
         return reportsList;
     }
 

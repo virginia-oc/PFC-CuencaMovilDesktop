@@ -21,7 +21,7 @@ namespace CuencaMovilDesktop.UserControls
             DibujarGraficas();
             MostrarEstadisticas();
 
-            Gestion.GetAllReports();
+            //Gestion.GetAllReports(reportsTask);
         }
 
         /// <summary>

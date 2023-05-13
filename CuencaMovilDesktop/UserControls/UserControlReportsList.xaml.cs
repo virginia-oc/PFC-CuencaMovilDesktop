@@ -11,17 +11,16 @@ namespace CuencaMovilDesktop.UserControls
     /// </summary>
     public partial class UserControlReportsList : UserControl
     {
-        List<Report> reportsList = new List<Report>();
+        List<Report> reportsList;
 
         public UserControlReportsList()
         {
-            InitializeComponent();
-            //reportsList = new List<Report>(Gestion.GetAllReports());
-            reportsList = Gestion.GetAllReports();
+            InitializeComponent();          
         }
 
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        private async void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            reportsList = new List<Report>(await Gestion.GetAllReports());
             dgReports.DataContext = reportsList;
         }
     }

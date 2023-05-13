@@ -30,7 +30,7 @@
                           IsReadOnly="True">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Categoría" Binding="{Binding Category}" Visibility="Hidden"/>
+                    <DataGridTextColumn Header="Categoría" Binding="{Binding Category}"/>
                     <DataGridTextColumn Header="Estado" Binding="{Binding Status}"/>
                     <DataGridTextColumn Header="Descripción" Binding="{Binding Description}" />
                     <!--<DataGridTemplateColumn Header="Foto" Width="SizeToCells" IsReadOnly="True">
