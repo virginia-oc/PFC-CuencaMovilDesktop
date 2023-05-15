@@ -4,38 +4,44 @@ using System.Collections.Generic;
 using System.Windows.Documents;
 
 namespace Entidades
-{
-    
-    [FirestoreData]
+{     
     public class Report
-    {
-        //[FirestoreProperty]
-        //public string Id { get; set; }
-        [FirestoreProperty("dateTime")]
-        public string DateTime { get; set; }
-        [FirestoreProperty("latitude")]
-        public double Latitude { get; set; }
-        [FirestoreProperty("longitude")]
+    {        
+        public string Id { get; set; }      
+        public string DateTime { get; set; }      
+        public double Latitude { get; set; }       
         public double Longitude { get; set; }
-        [FirestoreProperty("category")]
         public string Category { get; set; }
-        [FirestoreProperty("description")]
         public string Description { get; set; }
-        [FirestoreProperty("isIncident")]
-        public bool IsIncident { get; set; }
-        [FirestoreProperty("photoURLs")]
+        public bool IsIncident { get; set; }     
         public List<string> PhotoURLs { get; set; }
-        [FirestoreProperty("status")]
         public string Status { get; set; }
 
         public Report() 
         { 
         }
 
+        /// <summary>
+        /// Este método clona el report de Firebase que entre por parámetro
+        /// a un nuevo objeto de la clase Report
+        /// </summary>
+        /// <param name="reportFirebase"></param>
+        public Report(ReportFirebase reportFirebase)
+        {
+            DateTime = reportFirebase.DateTime;
+            Latitude = reportFirebase.Latitude;
+            Longitude = reportFirebase.Longitude;
+            Category = reportFirebase.Category;
+            Description = reportFirebase.Description;
+            IsIncident= reportFirebase.IsIncident;
+            PhotoURLs = new List<string>(reportFirebase.PhotoURLs);
+            Status = reportFirebase.Status;
+        }
+
         public Report(string id, string dateTime, string category,
             string description, bool isIncident, string status)
         {
-            //Id = id;
+            Id = id;
             DateTime = dateTime;
             Category = category;
             Description = description;
@@ -47,7 +53,8 @@ namespace Entidades
         }
 
         public Report(string id, string dateTime, string category, string description,
-            bool isIncident, string status, List<string> photoURLs, double latitude, double longitude)
+            bool isIncident, string status, List<string> photoURLs, double latitude, 
+            double longitude)
             : this(id, dateTime, category, description, isIncident, status)
         {
             PhotoURLs = new List<string>(photoURLs);
@@ -57,9 +64,9 @@ namespace Entidades
 
         public override string ToString()
         {
-            return DateTime + " - " + Category + " - " + Description + " - " 
+            return Id + " - " + DateTime + " - " + Category + " - " + Description + " - " 
                 + Latitude + " - " + Longitude + " - " + IsIncident + " - " 
                 + PhotoURLs + " - " + Status;
-        }
+        }        
     }
 }

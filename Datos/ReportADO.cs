@@ -2,8 +2,8 @@ using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Diagnostics;
 using Google.Cloud.Firestore;
+using System.Diagnostics;
 
 namespace Datos
 {
@@ -35,11 +35,12 @@ namespace Datos
 
             foreach (DocumentSnapshot document in allReports.Documents)
             {
-                Report report = document.ConvertTo<Report>();              
+                ReportFirebase reportFirebase = document.ConvertTo<ReportFirebase>();  
+                Report report = new Report(reportFirebase);
+                report.Id = document.Id;
                 reportsList.Add(report);
                 Debug.WriteLine(report);
             }
-
             return reportsList;
         }      
 

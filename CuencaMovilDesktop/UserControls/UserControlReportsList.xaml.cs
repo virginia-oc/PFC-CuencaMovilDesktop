@@ -11,7 +11,9 @@ namespace CuencaMovilDesktop.UserControls
     /// </summary>
     public partial class UserControlReportsList : UserControl
     {
-        List<Report> reportsList;
+        List<Report> allReportsList;
+        List<Report> incidentsList = new List<Report>();
+        List<Report> requestsList = new List<Report>();
 
         public UserControlReportsList()
         {
@@ -20,8 +22,45 @@ namespace CuencaMovilDesktop.UserControls
 
         private async void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            reportsList = new List<Report>(await Gestion.GetAllReports());
-            dgReports.DataContext = reportsList;
+            allReportsList = new List<Report>(await Gestion.GetAllReports());
+            dgReports.DataContext = allReportsList;
+          
+            foreach (Report report in allReportsList)
+            {
+                if (report.IsIncident)
+                    incidentsList.Add(report);
+                else
+                    requestsList.Add(report);
+            }          
+        }
+
+        private void cbIncident_Checked(object sender, RoutedEventArgs e)
+        {
+            cbRequest.IsChecked = false;
+            cbShowAll.IsChecked = false;
+                     
+            dgReports.DataContext = incidentsList;  
+        }
+      
+        private void cbRequest_Checked(object sender, RoutedEventArgs e)
+        {
+            cbIncident.IsChecked = false;
+            cbShowAll.IsChecked = false;
+
+            dgReports.DataContext = requestsList;
+        }
+
+        private void cbShowAll_Checked(object sender, RoutedEventArgs e)
+        {
+            cbIncident.IsChecked = false;
+            cbRequest.IsChecked = false;
+
+            dgReports.DataContext = allReportsList;
+        }
+
+        private void ShowAllReports(object sender, RoutedEventArgs e)
+        {
+            dgReports.DataContext = allReportsList;
         }
     }
 }

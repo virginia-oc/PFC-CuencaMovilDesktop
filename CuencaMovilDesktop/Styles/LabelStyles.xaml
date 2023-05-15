@@ -14,5 +14,4 @@
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="Margin" Value="20,10,0,10"/>
     </Style>
-
 </ResourceDictionary>

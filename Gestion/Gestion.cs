@@ -13,20 +13,18 @@ public class Gestion
         
     public static async Task<List<Report>> GetAllReports()
     {
-        List<Report> reportsList;
-        //Task<List<Report>> reportsTask;
+        List<Report> reportsList;        
 
         using (ReportADO reportADO = new ReportADO())
-        {
-            //reportsTask = reportADO.GetAllReportsAsync();
+        {           
             reportsList = new List<Report>(await reportADO.GetAllReportsAsync()); 
             Debug.WriteLine(reportsList.Count);
         }
 
-        foreach (Report report in reportsList) 
-        {
-            Debug.WriteLine(report);
-                }
+        //foreach (KeyValuePair idReport in reportsDicc) 
+        //{
+        //    Debug.WriteLine(idReport);
+        //}
         return reportsList;
     }
 

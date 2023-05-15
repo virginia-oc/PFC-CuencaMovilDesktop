@@ -14,12 +14,28 @@
 
         <Border Background="{StaticResource panelOverColor}"
                     CornerRadius="20"
-                    Padding="0,0,0,20">
+                    Padding="20">
+            <StackPanel>
+                <DockPanel>
+                    <Label Style="{StaticResource fieldLabel}">Filtrar por incidencias/peticiones:</Label>
+                    <Label Style="{StaticResource fieldLabel}">Incidencia</Label>
+                    <CheckBox x:Name="cbIncident"
+                        VerticalAlignment="center"                                    
+                        VerticalContentAlignment="Center" Checked="cbIncident_Checked" Unchecked="ShowAllReports">
+                    </CheckBox>
+                    <Label Style="{StaticResource fieldLabel}">Petición</Label>
+                    <CheckBox x:Name="cbRequest"
+                        VerticalAlignment="center" Checked="cbRequest_Checked" Unchecked="ShowAllReports"></CheckBox>
+                    <Label Style="{StaticResource fieldLabel}">Todos los reportes</Label>
+                    <CheckBox x:Name="cbShowAll"
+                        VerticalAlignment="center" Checked="cbShowAll_Checked" Unchecked="ShowAllReports"></CheckBox>
+
+                </DockPanel>
             <DataGrid x:Name="dgReports" 
                           ItemsSource="{Binding Mode=OneWay}"                     
                           AutoGenerateColumns="False" 
                           HorizontalAlignment="Center" 
-                          Width="370"
+                          Width="600"
                           FontSize="16"
                           Height="330"
                           CanUserReorderColumns="False" 
@@ -42,6 +58,7 @@
                     </DataGridTemplateColumn>-->
                 </DataGrid.Columns>
             </DataGrid>
+            </StackPanel>
         </Border>
     </StackPanel>
 </UserControl>
