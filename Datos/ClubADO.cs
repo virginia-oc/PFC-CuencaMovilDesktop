@@ -2,6 +2,7 @@
 using Google.Cloud.Firestore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +30,7 @@ namespace Datos
             firestoredb = FirestoreDb.Create(projectId);
         }
 
-        public Task<DocumentReference> AddClub(Club newClub)
+        public Task<DocumentReference> AddClub(ClubFirebase newClub)
         {
             CollectionReference club = firestoredb.Collection("clubs");
             Dictionary<string, object> data = new Dictionary<string, object>()
@@ -40,16 +41,26 @@ namespace Datos
                 { "phone", newClub.Phone },
                 { "email", newClub.Email },
                 { "website", newClub.Website },
-                { "photo", "" }
+                { "photoURLs", newClub.PhotoURLs }
             };
             return club.AddAsync(data);
         }
 
-        async void GetAllClubs()
+        public async Task<List<Club>> GetAllClubsAsync()
         {
-            DocumentReference docref = firestoredb.Collection(collectionName)
-                .Document();
-            DocumentSnapshot snap = await docref.GetSnapshotAsync();
+            CollectionReference collection = firestoredb.Collection(collectionName);
+            QuerySnapshot allClubs = await collection.GetSnapshotAsync();
+            List<Club> clubsList = new List<Club>();
+
+            foreach (DocumentSnapshot document in allClubs.Documents)
+            {
+                ClubFirebase clubFirebase = document.ConvertTo<ClubFirebase>();
+                Club club = new Club(document.Id, clubFirebase);
+                //club.Id = document.Id;
+                clubsList.Add(club);
+                Debug.WriteLine(club);
+            }
+            return clubsList;
         }
 
         async void GetClubById(string documentId)

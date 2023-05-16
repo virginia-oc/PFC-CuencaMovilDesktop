@@ -8,7 +8,7 @@
                 <EventTrigger.Actions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation To="280" 
+                            <DoubleAnimation To="300" 
                                              Duration="0:0:0.5" 
                                              Storyboard.TargetProperty="(Border.Width)" />
                         </Storyboard>

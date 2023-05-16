@@ -8,31 +8,46 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    [FirestoreData]
     public class Club
     {
         string emptyField = "(sin especificar)";
-
-        [FirestoreProperty]
-        public int Id { get; set; }
-        [FirestoreProperty]
+      
+        public string Id { get; set; }        
         public string Name { get; set; }
-        [FirestoreProperty]
         public string Category { get; set; }
-        [FirestoreProperty]
         public string Description { get; set; }
-        [FirestoreProperty]
         public string Phone { get; set; }
-        [FirestoreProperty]
         public string Website { get; set; }
-        [FirestoreProperty]
         public string Email { get; set; }
-        [FirestoreProperty]
-        public byte[]? Photo { get; set; }
+        public List<string> PhotoURLs { get; set; }
 
-        public Club(string name, string category, string descripcion,
+        public Club()
+        {
+
+        }
+
+        /// <summary>
+        /// Este método clona el club de Firebase que entre por parámetro
+        /// a un nuevo objeto de la clase Club
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="clubFirebase"></param>
+        public Club(string id, ClubFirebase clubFirebase)
+        {
+            Id= id;
+            Name = clubFirebase.Name;
+            Category = clubFirebase.Category;
+            Description = clubFirebase.Description;
+            Phone = clubFirebase.Phone;
+            Website = clubFirebase.Website;
+            Email = clubFirebase.Email;
+            PhotoURLs = clubFirebase.PhotoURLs;
+        }
+
+        public Club(string id, string name, string category, string descripcion,
             string email) 
-        {        
+        {      
+            Id= id;
             Name = name;
             Category = category;
             Description = descripcion;
@@ -41,13 +56,13 @@ namespace Entidades
             Website = emptyField;
         }   
 
-        public Club(string name, string category, string descripcion, 
-            string phone, string website, string email, byte[] photo) 
-            : this(name, category, descripcion, email)
+        public Club(string id, string name, string category, string descripcion, 
+            string phone, string website, string email, List<string> photos) 
+            : this(id, name, category, descripcion, email)
         {
             Website = website;
             Phone = phone;
-            Photo = photo;
+            PhotoURLs = new List<string>(photos);
         }
     }
 }

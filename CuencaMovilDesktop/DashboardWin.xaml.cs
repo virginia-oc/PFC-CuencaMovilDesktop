@@ -82,5 +82,11 @@ namespace CuencaMovilDesktop
         {
 
         }
+
+        private void ShowClubsClick(object sender, RoutedEventArgs e)
+        {
+            panel.Children.Clear();
+            panel.Children.Add(new UserControlClubsList());
+        }
     }
 }

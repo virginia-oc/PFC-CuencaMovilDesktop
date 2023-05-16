@@ -158,7 +158,7 @@
                     </LinearGradientBrush>
                 </Border.Background>
 
-                <StackPanel Width="280"
+                <StackPanel Width="300"
                             HorizontalAlignment="Left"
                             Margin="0,20,0,0">
 
@@ -220,9 +220,24 @@
                         </StackPanel>
                     </RadioButton>
 
+                    <RadioButton x:Name="showClubs"
+                                 Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource color4}"                                
+                                 Command="{Binding ShowHomeViewCommand}"
+                                 Click="ShowClubsClick">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="PeopleGroup" 
+                                          Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Margin="5,0,0,0" 
+                                           Text="Consultar asociaciones" 
+                                           Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+                    
+
                     <RadioButton x:Name="addClub"
                                  Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource color4}"
+                                 Tag="{StaticResource color9}"
                                  Command="{Binding ShowCustomerViewCommand}"
                                  Click="addClubClick">
                         <StackPanel Orientation="Horizontal">

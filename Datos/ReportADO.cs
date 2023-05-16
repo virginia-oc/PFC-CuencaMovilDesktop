@@ -36,8 +36,8 @@ namespace Datos
             foreach (DocumentSnapshot document in allReports.Documents)
             {
                 ReportFirebase reportFirebase = document.ConvertTo<ReportFirebase>();  
-                Report report = new Report(reportFirebase);
-                report.Id = document.Id;
+                Report report = new Report(document.Id, reportFirebase);
+                //report.Id = document.Id;
                 reportsList.Add(report);
                 Debug.WriteLine(report);
             }

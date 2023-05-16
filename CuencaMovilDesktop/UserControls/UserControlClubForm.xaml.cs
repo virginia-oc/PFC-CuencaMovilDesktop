@@ -43,9 +43,10 @@ namespace CuencaMovilDesktop.UserControls
             string email = txtEmail.Text;   
             string description = tbDescription.Text;
             string website = txtWebsite.Text;
-            byte[] photo = new byte[1];
+            //byte[] photo = new byte[1];
+            List<string> photo = new List<string>();
 
-            Club newClub = new(name, category, description, phone, website, email, photo);
+            ClubFirebase newClub = new(name, category, description, phone, website, email, photo);
             Gestion.AddNewClub(newClub);
 
             WinMessageInfo win = new WinMessageInfo(messageInfoSucces);

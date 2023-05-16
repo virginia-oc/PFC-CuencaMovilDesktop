@@ -11,7 +11,7 @@ namespace CuencaMovilDesktop.UserControls
     /// </summary>
     public partial class UserControlReportsList : UserControl
     {
-        List<Report> allReportsList;
+        List<Report> allReportsList = new List<Report>();
         List<Report> incidentsList = new List<Report>();
         List<Report> requestsList = new List<Report>();
 

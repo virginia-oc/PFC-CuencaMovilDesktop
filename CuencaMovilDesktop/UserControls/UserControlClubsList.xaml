@@ -5,8 +5,60 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CuencaMovilDesktop.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="810" d:DesignWidth="1200">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="810" d:DesignWidth="1200" Loaded="UserControl_Loaded">
+    <StackPanel  x:Name="panel" Grid.Column="1"                   
+                     Style="{StaticResource panelFontStyle}"
+                     Margin="60,0,60,20">
+        <Label Style="{StaticResource titleLabel}"
+                   Margin="0,0,0,10">Lista de asociaciones</Label>
+
+        <Border Background="{StaticResource panelOverColor}"
+                    CornerRadius="20"
+                    Padding="20">
+            <StackPanel>
+                <DockPanel>
+                    <Label Style="{StaticResource fieldLabel}">Filtrar por incidencias/peticiones:</Label>
+                    <Label Style="{StaticResource fieldLabel}">Incidencia</Label>
+                    <CheckBox x:Name="cbIncident"
+                        VerticalAlignment="center"                                    
+                        VerticalContentAlignment="Center">
+                    </CheckBox>
+                    <Label Style="{StaticResource fieldLabel}">Petición</Label>
+                    <CheckBox x:Name="cbRequest"
+                              VerticalAlignment="center"></CheckBox>
+                    <Label Style="{StaticResource fieldLabel}">Todos los reportes</Label>
+                    <CheckBox x:Name="cbShowAll"
+                              VerticalAlignment="center"></CheckBox>
+
+                </DockPanel>
+                <DataGrid x:Name="dgClubs" 
+                          ItemsSource="{Binding Mode=OneWay}"                     
+                          AutoGenerateColumns="False" 
+                          HorizontalAlignment="Center" 
+                          Width="600"
+                          FontSize="16"
+                          Height="330"
+                          CanUserReorderColumns="False" 
+                          CanUserAddRows="False" 
+                          CanUserDeleteRows="False" 
+                          CanUserResizeRows="False" 
+                          Margin="0,10,0,10"
+                          IsReadOnly="True">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Name}"/>
+                        <DataGridTextColumn Header="Categoría" Binding="{Binding Category}"/>
+                        <DataGridTextColumn Header="Descripción" Binding="{Binding Description}" />
+                        <!--<DataGridTemplateColumn Header="Foto" Width="SizeToCells" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Height="70" Width="70" Source="{Binding Photo}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>-->
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Border>
+    </StackPanel>
 </UserControl>

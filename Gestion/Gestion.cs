@@ -18,7 +18,7 @@ public class Gestion
         using (ReportADO reportADO = new ReportADO())
         {           
             reportsList = new List<Report>(await reportADO.GetAllReportsAsync()); 
-            Debug.WriteLine(reportsList.Count);
+            //Debug.WriteLine(reportsList.Count);
         }
 
         //foreach (KeyValuePair idReport in reportsDicc) 
@@ -26,6 +26,17 @@ public class Gestion
         //    Debug.WriteLine(idReport);
         //}
         return reportsList;
+    }
+
+    public static async Task<List<Club>> GetAllClubs()
+    {
+        List<Club> clubsList;
+
+        using (ClubADO clubADO = new ClubADO())
+        {
+            clubsList = new List<Club>(await clubADO.GetAllClubsAsync());
+        }
+        return clubsList;
     }
 
     public static void UpdateStatusReport(string status)
@@ -58,7 +69,7 @@ public class Gestion
 
     }
 
-    public static void AddNewClub(Club newClub)
+    public static void AddNewClub(ClubFirebase newClub)
     {
         using (ClubADO clubADO = new ClubADO())
         {

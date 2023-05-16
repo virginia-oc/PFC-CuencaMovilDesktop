@@ -161,33 +161,4 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
-
-
-    <!--BOTON EXAMEN-->
-    <Style x:Key="botonExamen" TargetType="Button">
-        <!--Normal button style-->
-        <!--<Setter Property="Width" Value="35"/>-->
-        <Setter Property="Background" Value="{StaticResource color1}"/>
-        <Setter Property="Foreground" Value="{StaticResource plainTextColor3}"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" BorderThickness="10">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <Border.BorderBrush>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                                <GradientStop Color="{StaticResource backColor6}" Offset="0"/>
-                                <GradientStop Color="{StaticResource backColor7}" Offset="0.5"/>
-                            </LinearGradientBrush>
-                        </Border.BorderBrush>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-
-    </Style>
-
-
-
 </ResourceDictionary>

@@ -26,8 +26,9 @@ namespace Entidades
         /// a un nuevo objeto de la clase Report
         /// </summary>
         /// <param name="reportFirebase"></param>
-        public Report(ReportFirebase reportFirebase)
+        public Report(string id, ReportFirebase reportFirebase)
         {
+            Id = id;
             DateTime = reportFirebase.DateTime;
             Latitude = reportFirebase.Latitude;
             Longitude = reportFirebase.Longitude;
