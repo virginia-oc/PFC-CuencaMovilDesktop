@@ -32,7 +32,15 @@ namespace CuencaMovilDesktop.UserControls
             this.report = report;
             form.DataContext = report;
             DisableFields(editable);
+            //selectComboBoxItem();
             this.dashboardWin= dasboardWin;
+        }
+
+        private void selectComboBoxItem()
+        {
+            if (report.Status == "Enviado" || report.Status == "SENT")          
+                comboStatus.SelectedItem = "Enviado";
+            
         }
 
         private void DisableFields(bool editable)
@@ -52,8 +60,7 @@ namespace CuencaMovilDesktop.UserControls
                 btnConfirmChanges.Visibility = Visibility.Hidden;
                 gridButtons.ColumnDefinitions.Clear();
                 btnBack.MaxWidth = 500;
-            }
-               
+            }               
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

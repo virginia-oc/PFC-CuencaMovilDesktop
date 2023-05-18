@@ -45,10 +45,12 @@
                     <DockPanel>
                         <Label Style="{StaticResource fieldLabel}">Status:</Label>
                         <ComboBox x:Name="comboStatus"
-                                    FontSize="10"
-                                    Height="25"
-                                    Width="100"
-                                    HorizontalAlignment="Left">
+                                  FontSize="10"
+                                  Height="25"
+                                  Width="100"
+                                  HorizontalAlignment="Left"
+                                  SelectedValuePath="Content"
+                                  SelectedValue="{Binding Status, Mode=OneWay}">
                             <ComboBoxItem>Enviado</ComboBoxItem>
                             <ComboBoxItem>Aceptado</ComboBoxItem>
                             <ComboBoxItem>Rechazado</ComboBoxItem>
