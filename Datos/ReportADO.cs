@@ -47,15 +47,18 @@ namespace Datos
             return reportsList;
         }
 
-        public async Task<string> GetAddressFromCoordinates(double latitude, double longitude)
+        public async Task<string> GetAddressFromCoordinatesAsync(double latitude, double longitude)
         {
             using (HttpClient client = new HttpClient())
             {
+                string latitudeStr = latitude.ToString().Replace(",", ".");
+                string longitudeStr = longitude.ToString().Replace(",", ".");
                 string url = 
                     $"https://maps.googleapis.com/maps/api/geocode/json?latlng=" +
-                    $"{latitude},{longitude}&key={apiKeyGeocoding}";
+                    $"{latitudeStr},{longitudeStr}&key={apiKeyGeocoding}";
                 HttpResponseMessage response = await client.GetAsync(url);
                 string responseContent = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine(url);
 
                 // Deserializar la respuesta JSON
                 dynamic data = JsonConvert.DeserializeObject(responseContent);
@@ -67,7 +70,7 @@ namespace Datos
             }
         }
 
-            async void GetReportById(string documentId)
+        async void GetReportById(string documentId)
         {
             DocumentReference docref = firestoredb.Collection(collectionName)
                 .Document(documentId);

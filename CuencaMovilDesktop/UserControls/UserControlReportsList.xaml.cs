@@ -16,10 +16,10 @@ namespace CuencaMovilDesktop.UserControls
         List<Report> requestsList = new List<Report>();
         private bool editableReport;
 
-        public UserControlReportsList(List<Report> allReportsList, bool editableReport)
+        public UserControlReportsList(bool editableReport)
         {
             InitializeComponent();
-            this.allReportsList = new List<Report>(allReportsList);
+            allReportsList = new List<Report>(DashboardWin.allReportsList);
             this.editableReport = editableReport;
         }
 

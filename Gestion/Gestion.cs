@@ -39,6 +39,16 @@ public class Gestion
         return clubsList;
     }
 
+    public static async Task<string> GetAddressFromCoordinates(double latitude, double longitude)
+    {
+        string address = "";
+        using (ReportADO reportADO = new ReportADO())
+        {
+            address = await reportADO.GetAddressFromCoordinatesAsync(latitude, longitude);
+        }
+        return address;
+    }
+
     public static void UpdateStatusReport(string status)
     {
 

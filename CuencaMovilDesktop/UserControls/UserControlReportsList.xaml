@@ -49,6 +49,7 @@
                     <DataGridTextColumn Header="Categoría" Binding="{Binding Category}"/>
                     <DataGridTextColumn Header="Estado" Binding="{Binding Status}"/>
                     <DataGridTextColumn Header="Descripción" Binding="{Binding Description}" />
+                    <DataGridTextColumn Header="Dirección" Binding="{Binding Address}" />
                     <!--<DataGridTemplateColumn Header="Foto" Width="SizeToCells" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

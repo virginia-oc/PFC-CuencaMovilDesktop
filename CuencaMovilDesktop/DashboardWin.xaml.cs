@@ -33,6 +33,13 @@ namespace CuencaMovilDesktop
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
             allReportsList = new List<Report>(await Gestion.GetAllReports());
+
+            foreach (Report report in allReportsList) 
+            {
+                report.Address = 
+                    await Gestion.GetAddressFromCoordinates(report.Latitude, report.Longitude);
+               
+            }
         }
 
         private void pnlControlBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
