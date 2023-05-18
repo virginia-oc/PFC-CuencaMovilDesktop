@@ -66,10 +66,10 @@ C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlClubForm.g.cs
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlClubForm.baml
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlClubsList.g.cs
-C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlReportDetail.g.cs
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlReportsList.g.cs
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlClubsList.baml
-C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlReportDetail.baml
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlReportsList.baml
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\WinMessageInfo.g.cs
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\WinMessageInfo.baml
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlReportForm.g.cs
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlReportForm.baml

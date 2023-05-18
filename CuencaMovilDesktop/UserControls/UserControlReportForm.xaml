@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="CuencaMovilDesktop.UserControls.UserControlReportDetail"
+﻿<UserControl x:Class="CuencaMovilDesktop.UserControls.UserControlReportForm"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -29,14 +29,15 @@
                         <Label Style="{StaticResource fieldLabel}">Categoría:</Label>
 
                         <TextBox x:Name="txtCategory"                              
-                                Style="{StaticResource textBoxStyle1}">
+                                Style="{StaticResource textBoxStyle1}"
+                                 Text="{Binding Category, Mode=OneWay}">
                         </TextBox>
                     </DockPanel>
 
                     <DockPanel>
                         <Label Style="{StaticResource fieldLabel}">Dirección:</Label>
                         <TextBox x:Name="txtAddress"
-                              Style="{StaticResource textBoxStyle1}">
+                                 Style="{StaticResource textBoxStyle1}">
                         </TextBox>
                     </DockPanel>
 
@@ -57,7 +58,8 @@
                     <DockPanel>
                         <Label Style="{StaticResource fieldLabel}">Fecha y hora:</Label>
                         <TextBox x:Name="txtDatetime"
-                              Style="{StaticResource textBoxStyle1}">
+                                 Style="{StaticResource textBoxStyle1}"
+                                 Text="{Binding DateTime, Mode=OneWay}">
                         </TextBox>
                     </DockPanel>
 
@@ -86,12 +88,11 @@
                         <Label Style="{StaticResource fieldLabel}">Descripción:</Label>
 
                         <TextBox x:Name="tbDescription"
-                                       Background="{StaticResource titleColor2}"
-                                       Margin="5,10,0,0"
-                                       Height="154"
-                                       Text="{Binding Notes}" 
-                                     TextWrapping="Wrap"        
-                                       ></TextBox>
+                                Background="{StaticResource titleColor2}"
+                                Margin="5,10,0,0"
+                                Height="154"
+                                TextWrapping="Wrap"        
+                                Text="{Binding Description, Mode=OneWay}"></TextBox>
                     </DockPanel>
                  
                 </StackPanel>
@@ -100,10 +101,25 @@
 
             </Border>
 
-            <Button x:Name="btnConfirmarCambios"
-                Style="{StaticResource btnStyle1}"                             
-                Margin="30, 10, 30, 0"
-                Width="500"
-                Content="Botón de insertar/modificar"/>
+        <Grid x:Name="gridButtons">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                    x:Name="btnBack"
+                    Style="{StaticResource btnStyle1}"                             
+                    Margin="30, 10, 30, 0"              
+                    Content="Atrás"
+                    DockPanel.Dock="Left" Click="btnBack_Click"/>
+
+            <Button Grid.Column="1"
+                    x:Name="btnConfirmChanges"
+                    Style="{StaticResource btnStyle1}"                             
+                    Margin="30, 10, 30, 0"             
+                    Content="Modificar reporte"
+                    DockPanel.Dock="Right" Click="btnConfirmChanges_Click"/>
+        </Grid>
+       
     </StackPanel>
 </UserControl>

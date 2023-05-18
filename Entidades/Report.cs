@@ -16,6 +16,7 @@ namespace Entidades
         public bool IsIncident { get; set; }     
         public List<string> PhotoURLs { get; set; }
         public string Status { get; set; }
+        public string Address { get; set; } 
 
         public Report() 
         { 

@@ -11,18 +11,20 @@ namespace CuencaMovilDesktop.UserControls
     /// </summary>
     public partial class UserControlReportsList : UserControl
     {
-        List<Report> allReportsList = new List<Report>();
+        List<Report> allReportsList;
         List<Report> incidentsList = new List<Report>();
         List<Report> requestsList = new List<Report>();
+        private bool editableReport;
 
-        public UserControlReportsList()
+        public UserControlReportsList(List<Report> allReportsList, bool editableReport)
         {
-            InitializeComponent();          
+            InitializeComponent();
+            this.allReportsList = new List<Report>(allReportsList);
+            this.editableReport = editableReport;
         }
 
-        private async void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            allReportsList = new List<Report>(await Gestion.GetAllReports());
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {           
             dgReports.DataContext = allReportsList;
           
             foreach (Report report in allReportsList)
@@ -61,6 +63,14 @@ namespace CuencaMovilDesktop.UserControls
         private void ShowAllReports(object sender, RoutedEventArgs e)
         {
             dgReports.DataContext = allReportsList;
+        }
+
+        private void dgReports_MouseDoubleClick(object sender, 
+            System.Windows.Input.MouseButtonEventArgs e)
+        {
+            panel.Children.Clear();
+            panel.Children.Add(new UserControlReportForm(
+                (Report)dgReports.SelectedItem, editableReport));
         }
     }
 }

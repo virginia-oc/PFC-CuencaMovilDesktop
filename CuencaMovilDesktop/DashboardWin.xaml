@@ -10,7 +10,7 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
-        Style="{StaticResource winStyle}">
+        Style="{StaticResource winStyle}" Loaded="Window_Loaded">
 
 
     <!--Grid de todo el contenido-->

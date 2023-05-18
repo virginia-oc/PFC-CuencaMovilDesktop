@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Google.Cloud.Firestore;
 using System.Diagnostics;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace Datos
 {
@@ -12,6 +14,7 @@ namespace Datos
         bool disposed;
         private static string projectId = "cuenca-movil-22b63";      
         private string collectionName = "reports";
+        private string apiKeyGeocoding = "AIzaSyDCdEHuAJCSZs0YPSIb-Zl44vXtTkKsaTA";
         FirestoreDb firestoredb; 
 
         public ReportADO() 
@@ -42,9 +45,29 @@ namespace Datos
                 Debug.WriteLine(report);
             }
             return reportsList;
-        }      
+        }
 
-        async void GetReportById(string documentId)
+        public async Task<string> GetAddressFromCoordinates(double latitude, double longitude)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                string url = 
+                    $"https://maps.googleapis.com/maps/api/geocode/json?latlng=" +
+                    $"{latitude},{longitude}&key={apiKeyGeocoding}";
+                HttpResponseMessage response = await client.GetAsync(url);
+                string responseContent = await response.Content.ReadAsStringAsync();
+
+                // Deserializar la respuesta JSON
+                dynamic data = JsonConvert.DeserializeObject(responseContent);
+
+                // Extraer la dirección de los resultados
+                string address = data.results[0].formatted_address;
+
+                return address;
+            }
+        }
+
+            async void GetReportById(string documentId)
         {
             DocumentReference docref = firestoredb.Collection(collectionName)
                 .Document(documentId);
@@ -60,7 +83,7 @@ namespace Datos
             }
         }
 
-        public void UpdateStatusReport(string status)
+        public void UpdateReportStatus(string status)
         {
 
         }

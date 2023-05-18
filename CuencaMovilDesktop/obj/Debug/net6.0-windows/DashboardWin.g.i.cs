@@ -174,7 +174,7 @@ namespace CuencaMovilDesktop {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CuencaMovilDesktop;component/dashboardwin.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CuencaMovilDesktop;V1.0.0.0;component/dashboardwin.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\DashboardWin.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

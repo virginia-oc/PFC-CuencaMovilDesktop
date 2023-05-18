@@ -16,7 +16,7 @@
     <Compile Update="UserControls\UserControlClubsList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserControls\UserControlReportDetail.xaml.cs">
+    <Compile Update="UserControls\UserControlReportForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\UserControlReportsList.xaml.cs">
@@ -57,7 +57,7 @@
     <Page Update="UserControls\UserControlDashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserControls\UserControlReportDetail.xaml">
+    <Page Update="UserControls\UserControlReportForm.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\UserControlReportsList.xaml">

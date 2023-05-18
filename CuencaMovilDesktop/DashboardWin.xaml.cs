@@ -1,4 +1,5 @@
 ﻿using CuencaMovilDesktop.UserControls;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,17 @@ namespace CuencaMovilDesktop
     /// </summary>
     public partial class DashboardWin : Window
     {
+        public static List<Report> allReportsList = new List<Report>();
+
         public DashboardWin()
         {
             InitializeComponent();
             panel.Children.Add(new UserControlDashboard());
+        }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            allReportsList = new List<Report>(await Gestion.GetAllReports());
         }
 
         private void pnlControlBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -52,13 +60,13 @@ namespace CuencaMovilDesktop
         private void showReportsClick(object sender, RoutedEventArgs e)
         {
             panel.Children.Clear();
-            panel.Children.Add(new UserControlReportsList());
+            panel.Children.Add(new UserControlReportsList(false));
         }
 
         private void editReportClick(object sender, RoutedEventArgs e)
         {
             panel.Children.Clear();
-            panel.Children.Add(new UserControlReportDetail());
+            panel.Children.Add(new UserControlReportsList(true));
         }
 
         private void printReportClick(object sender, RoutedEventArgs e)
@@ -88,5 +96,7 @@ namespace CuencaMovilDesktop
             panel.Children.Clear();
             panel.Children.Add(new UserControlClubsList());
         }
+
+        
     }
 }
