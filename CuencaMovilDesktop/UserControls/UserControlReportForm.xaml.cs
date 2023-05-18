@@ -23,14 +23,16 @@ namespace CuencaMovilDesktop.UserControls
     {
         Report report = new Report();
         private bool editable;
+        DashboardWin dashboardWin;
 
-        public UserControlReportForm(Report report, bool editable)
+        public UserControlReportForm(DashboardWin dasboardWin, Report report, bool editable)
         {
             InitializeComponent();
             this.editable = editable;
             this.report = report;
             form.DataContext = report;
             DisableFields(editable);
+            this.dashboardWin= dasboardWin;
         }
 
         private void DisableFields(bool editable)
@@ -56,8 +58,8 @@ namespace CuencaMovilDesktop.UserControls
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            panel.Children.Clear();
-            panel.Children.Add(new UserControlReportsList(editable));
+            dashboardWin.ClearPanel();
+            dashboardWin.panel.Children.Add(new UserControlReportsList(dashboardWin, editable));
         }
 
         private void btnConfirmChanges_Click(object sender, RoutedEventArgs e)

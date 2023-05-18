@@ -37,7 +37,8 @@
                     <DockPanel>
                         <Label Style="{StaticResource fieldLabel}">Dirección:</Label>
                         <TextBox x:Name="txtAddress"
-                                 Style="{StaticResource textBoxStyle1}">
+                                 Style="{StaticResource textBoxStyle1}"
+                                 Text="{Binding Address, Mode=OneWay}">
                         </TextBox>
                     </DockPanel>
 

@@ -35,7 +35,7 @@
                           ItemsSource="{Binding Mode=OneWay}"                     
                           AutoGenerateColumns="False" 
                           HorizontalAlignment="Center" 
-                          Width="600"
+                          Width="800"
                           FontSize="16"
                           Height="330"
                           CanUserReorderColumns="False" 
@@ -49,8 +49,14 @@
                     <DataGridTextColumn Header="Categoría" Binding="{Binding Category}"/>
                     <DataGridTextColumn Header="Estado" Binding="{Binding Status}"/>
                     <DataGridTextColumn Header="Descripción" Binding="{Binding Description}" />
-                    <DataGridTextColumn Header="Dirección" Binding="{Binding Address}" />
-                    <!--<DataGridTemplateColumn Header="Foto" Width="SizeToCells" IsReadOnly="True">
+                        <DataGridTextColumn  Header="Dirección" Binding="{Binding Address}" Width="40*" >
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap"></Setter>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                       </DataGridTextColumn>
+                        <!--<DataGridTemplateColumn Header="Foto" Width="SizeToCells" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Image Height="70" Width="70" Source="{Binding Photo}" />

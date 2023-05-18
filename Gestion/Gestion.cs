@@ -17,14 +17,8 @@ public class Gestion
 
         using (ReportADO reportADO = new ReportADO())
         {           
-            reportsList = new List<Report>(await reportADO.GetAllReportsAsync()); 
-            //Debug.WriteLine(reportsList.Count);
-        }
-
-        //foreach (KeyValuePair idReport in reportsDicc) 
-        //{
-        //    Debug.WriteLine(idReport);
-        //}
+            reportsList = new List<Report>(await reportADO.GetAllReportsAsync());            
+        }      
         return reportsList;
     }
 

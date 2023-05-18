@@ -37,8 +37,7 @@ namespace CuencaMovilDesktop
             foreach (Report report in allReportsList) 
             {
                 report.Address = 
-                    await Gestion.GetAddressFromCoordinates(report.Latitude, report.Longitude);
-               
+                    await Gestion.GetAddressFromCoordinates(report.Latitude, report.Longitude);             
             }
         }
 
@@ -67,13 +66,13 @@ namespace CuencaMovilDesktop
         private void showReportsClick(object sender, RoutedEventArgs e)
         {
             panel.Children.Clear();
-            panel.Children.Add(new UserControlReportsList(false));
+            panel.Children.Add(new UserControlReportsList(this, false));
         }
 
         private void editReportClick(object sender, RoutedEventArgs e)
         {
             panel.Children.Clear();
-            panel.Children.Add(new UserControlReportsList(true));
+            panel.Children.Add(new UserControlReportsList(this, true));
         }
 
         private void printReportClick(object sender, RoutedEventArgs e)
@@ -104,6 +103,9 @@ namespace CuencaMovilDesktop
             panel.Children.Add(new UserControlClubsList());
         }
 
-        
+        public void ClearPanel()
+        {
+            panel.Children.Clear();
+        }
     }
 }
