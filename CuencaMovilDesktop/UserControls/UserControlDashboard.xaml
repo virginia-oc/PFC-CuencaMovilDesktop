@@ -115,7 +115,7 @@
                        Foreground="White"
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
-                       Margin="0,0,0,10">Total productos por categoría</Label>
+                       Margin="0,0,0,10">Gráfica 1</Label>
                 <!--<lvc:PieChart x:Name="pieChart"                         
                               Width="500"
                               Height="300"
@@ -141,7 +141,7 @@
                        Foreground="White"
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
-                       Margin="0,0,0,10">Total pedidos por cliente</Label>
+                       Margin="0,0,0,10">Gráfica 2</Label>
                 <!--<lvc:CartesianChart x:Name="columnChart"
                                 Series="{Binding chartOrdersCustomer}"
                                 Width="500"
