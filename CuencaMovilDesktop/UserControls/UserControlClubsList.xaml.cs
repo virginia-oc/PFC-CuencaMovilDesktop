@@ -21,16 +21,18 @@ namespace CuencaMovilDesktop.UserControls
     /// </summary>
     public partial class UserControlClubsList : UserControl
     {
-        List<Club> allClubsList = new List<Club>();
+        List<Club> allClubsList;
+        MainWin mainWin;
 
-        public UserControlClubsList()
+        public UserControlClubsList(MainWin mainWin)
         {
             InitializeComponent();
+            allClubsList = new List<Club>(MainWin.allClubsList);
+            this.mainWin = mainWin;
         }
 
-        private async void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            allClubsList = new List<Club>(await Gestion.GetAllClubs());
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {            
             dgClubs.DataContext = allClubsList;
         }
     }

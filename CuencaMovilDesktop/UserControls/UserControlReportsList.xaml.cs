@@ -15,14 +15,14 @@ namespace CuencaMovilDesktop.UserControls
         List<Report> incidentsList = new List<Report>();
         List<Report> requestsList = new List<Report>();
         private bool editableReport;
-        DashboardWin dashboardWin;
+        MainWin mainWin;
 
-        public UserControlReportsList(DashboardWin dasboardWin, bool editableReport)
+        public UserControlReportsList(MainWin mainWin, bool editableReport)
         {
             InitializeComponent();
-            allReportsList = new List<Report>(DashboardWin.allReportsList);
+            allReportsList = new List<Report>(MainWin.allReportsList);
             this.editableReport = editableReport;
-            this.dashboardWin = dasboardWin;
+            this.mainWin = mainWin;
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -70,8 +70,8 @@ namespace CuencaMovilDesktop.UserControls
         private void dgReports_MouseDoubleClick(object sender, 
             System.Windows.Input.MouseButtonEventArgs e)
         {
-            dashboardWin.ClearPanel();
-            dashboardWin.panel.Children.Add(new UserControlReportForm(dashboardWin, 
+            mainWin.ClearPanel();
+            mainWin.panel.Children.Add(new UserControlReportForm(mainWin, 
                 (Report)dgReports.SelectedItem, editableReport));
         }
     }

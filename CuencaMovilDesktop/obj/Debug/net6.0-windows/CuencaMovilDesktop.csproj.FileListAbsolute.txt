@@ -31,11 +31,9 @@ C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\bin\Debug\net6.
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\bin\Debug\net6.0-windows\Datos.pdb
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\bin\Debug\net6.0-windows\Entidades.pdb
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\CuencaMovilDesktop.csproj.AssemblyReference.cache
-C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\DashboardWin.g.cs
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\CuencaMovilDesktop_MarkupCompile.cache
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\CuencaMovilDesktop_MarkupCompile.lref
-C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\DashboardWin.baml
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\CuencaMovilDesktop.g.resources
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\CuencaMovilDesktop.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\CuencaMovilDesktop.AssemblyInfoInputs.cache
@@ -73,3 +71,5 @@ C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\WinMessageInfo.baml
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlReportForm.g.cs
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\UserControls\UserControlReportForm.baml
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\MainWin.baml
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\obj\Debug\net6.0-windows\MainWin.g.cs

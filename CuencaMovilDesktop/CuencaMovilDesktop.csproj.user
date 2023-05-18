@@ -24,7 +24,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="DashboardWin.xaml">
+    <Page Update="MainWin.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WinMessageInfo.xaml">

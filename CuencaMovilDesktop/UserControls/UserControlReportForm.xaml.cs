@@ -23,9 +23,9 @@ namespace CuencaMovilDesktop.UserControls
     {
         Report report = new Report();
         private bool editable;
-        DashboardWin dashboardWin;
+        MainWin dashboardWin;
 
-        public UserControlReportForm(DashboardWin dasboardWin, Report report, bool editable)
+        public UserControlReportForm(MainWin mainWin, Report report, bool editable)
         {
             InitializeComponent();
             this.editable = editable;
@@ -33,7 +33,7 @@ namespace CuencaMovilDesktop.UserControls
             form.DataContext = report;
             DisableFields(editable);
             //selectComboBoxItem();
-            this.dashboardWin= dasboardWin;
+            this.dashboardWin= mainWin;
         }
 
         private void selectComboBoxItem()
