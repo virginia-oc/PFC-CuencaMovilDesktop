@@ -16,19 +16,12 @@
                     CornerRadius="20"
                     Padding="20">
             <StackPanel>
-                <DockPanel>
-                    <Label Style="{StaticResource fieldLabel}">Filtrar por incidencias/peticiones:</Label>
-                    <Label Style="{StaticResource fieldLabel}">Incidencia</Label>
-                    <CheckBox x:Name="cbIncident"
-                        VerticalAlignment="center"                                    
-                        VerticalContentAlignment="Center">
-                    </CheckBox>
-                    <Label Style="{StaticResource fieldLabel}">Petición</Label>
-                    <CheckBox x:Name="cbRequest"
-                              VerticalAlignment="center"></CheckBox>
-                    <Label Style="{StaticResource fieldLabel}">Todos los reportes</Label>
-                    <CheckBox x:Name="cbShowAll"
-                              VerticalAlignment="center"></CheckBox>
+                <DockPanel >
+                    <Label Style="{StaticResource fieldLabel}">Filtrar asociaciones por texto:</Label>
+                    <TextBox x:Name="tbBuscador"
+                             HorizontalAlignment="Left"
+                         VerticalAlignment="Center"
+                         Width="300" TextChanged="tbBuscador_TextChanged"></TextBox>
 
                 </DockPanel>
                 <DataGrid x:Name="dgClubs" 

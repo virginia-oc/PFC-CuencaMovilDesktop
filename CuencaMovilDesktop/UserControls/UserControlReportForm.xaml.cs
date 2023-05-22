@@ -32,15 +32,7 @@ namespace CuencaMovilDesktop.UserControls
             this.report = report;
             form.DataContext = report;
             DisableFields(editable);
-            //selectComboBoxItem();
             this.dashboardWin= mainWin;
-        }
-
-        private void selectComboBoxItem()
-        {
-            if (report.Status == "Enviado" || report.Status == "SENT")          
-                comboStatus.SelectedItem = "Enviado";
-            
         }
 
         private void DisableFields(bool editable)
@@ -71,7 +63,9 @@ namespace CuencaMovilDesktop.UserControls
 
         private void btnConfirmChanges_Click(object sender, RoutedEventArgs e)
         {
-
+            RequestConfirmWin win = new RequestConfirmWin(
+                report, comboStatus.SelectedValue.ToString(), "¿Desea modificar el reporte?");
+            win.ShowDialog();
         }
     }
 }

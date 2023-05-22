@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\CuencaMovilDesktop\App.xaml
-14748406197
+171442524374
 1-129263455
-10341752740
+13-485000398
 230413005645
-MainWin.xaml;Styles\ButtonStyles.xaml;Styles\LabelStyles.xaml;Styles\MenuDesplegableStyles.xaml;Styles\PanelStyles.xaml;Styles\TextBoxStyles.xaml;Styles\UIColors.xaml;UserControls\UserControlClubForm.xaml;UserControls\UserControlClubsList.xaml;UserControls\UserControlDashboard.xaml;UserControls\UserControlReportForm.xaml;UserControls\UserControlReportsList.xaml;WinAskCloseApp.xaml;WinMessageInfo.xaml;
+MainWin.xaml;RequestConfirmWin.xaml;Styles\ButtonStyles.xaml;Styles\LabelStyles.xaml;Styles\MenuDesplegableStyles.xaml;Styles\PanelStyles.xaml;Styles\TextBoxStyles.xaml;Styles\UIColors.xaml;UserControls\UserControlClubForm.xaml;UserControls\UserControlClubsList.xaml;UserControls\UserControlDashboard.xaml;UserControls\UserControlNewBroadcast.xaml;UserControls\UserControlPrintReport.xaml;UserControls\UserControlReportForm.xaml;UserControls\UserControlReportsList.xaml;WinAskCloseApp.xaml;WinMessageInfo.xaml;
 
 False
 

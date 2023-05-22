@@ -84,18 +84,6 @@
                     <StackPanel VerticalAlignment="Center"
                                     Margin="0,0,30,0"
                                 Style="{StaticResource panelFontStyle}">
-
-                        <TextBlock Text="Inicio de sesión:"
-                                       Foreground="{StaticResource titleColor3}"                                       
-                                       FontSize="16"
-                                       VerticalAlignment="Center"
-                                       FlowDirection="LeftToRight"/>
-                        <TextBlock x:Name="timeStamp" Text="Hora"
-                                       Foreground="{StaticResource titleColor3}"                                  
-                                       FontSize="16"
-                                       HorizontalAlignment="Left"
-                                       FontWeight="SemiBold"
-                                       FlowDirection="LeftToRight"/>
                     </StackPanel>
 
                     <TextBlock x:Name="nombreUsuario" Text="Usuario"
@@ -203,9 +191,7 @@
                                            Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
-
-                    
-
+                   
                     <RadioButton x:Name="printReport"
                                  Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color3}"

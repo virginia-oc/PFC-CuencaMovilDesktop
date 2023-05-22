@@ -1,0 +1,17 @@
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\bin\Release\net6.0-windows\Gestion.deps.json
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\bin\Release\net6.0-windows\Gestion.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\bin\Release\net6.0-windows\Gestion.pdb
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\bin\Release\net6.0-windows\Datos.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\bin\Release\net6.0-windows\Entidades.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\bin\Release\net6.0-windows\Datos.pdb
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\bin\Release\net6.0-windows\Entidades.pdb
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\obj\Release\net6.0-windows\Gestion.csproj.AssemblyReference.cache
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\obj\Release\net6.0-windows\Gestion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\obj\Release\net6.0-windows\Gestion.AssemblyInfoInputs.cache
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\obj\Release\net6.0-windows\Gestion.AssemblyInfo.cs
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\obj\Release\net6.0-windows\Gestion.csproj.CoreCompileInputs.cache
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\obj\Release\net6.0-windows\Gestion.csproj.CopyComplete
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\obj\Release\net6.0-windows\Gestion.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\obj\Release\net6.0-windows\refint\Gestion.dll
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\obj\Release\net6.0-windows\Gestion.pdb
+C:\Users\virgi\Desktop\PFC\CuencaMovilDesktop\Gestion\obj\Release\net6.0-windows\ref\Gestion.dll

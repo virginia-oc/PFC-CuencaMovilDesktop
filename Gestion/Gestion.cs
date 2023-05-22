@@ -17,7 +17,7 @@ public class Gestion
 
         using (ReportADO reportADO = new ReportADO())
         {           
-            reportsList = new List<Report>(await reportADO.GetAllReportsAsync());            
+            reportsList = new List<Report>(await reportADO.GetAllReports());            
         }      
         return reportsList;
     }
@@ -38,14 +38,33 @@ public class Gestion
         string address = "";
         using (ReportADO reportADO = new ReportADO())
         {
-            address = await reportADO.GetAddressFromCoordinatesAsync(latitude, longitude);
+            address = await reportADO.GetAddressFromCoordinates(latitude, longitude);
         }
         return address;
     }
 
-    public static void UpdateStatusReport(string status)
+    public static void UpdateReportStatus(Report report, string newStatus)
     {
+        using (ReportADO reportAdo = new ReportADO())
+        {
+            reportAdo.UpdateReportStatus(report.Id, newStatus);
+        }
+    }
 
+    public static List<Club> FilterClubsByText(List<Club> clubs, string text)
+    {
+        List<Club> filteredClubs = new List<Club>();
+        if (text.Length == 0)
+            return clubs;
+        else
+        {
+            foreach (Club club in clubs)
+            {
+               if (club.Contain(text))
+                   filteredClubs.Add(club);
+            }
+            return filteredClubs;
+        }
     }
 
     public static void GetReportsByStatus(string status)

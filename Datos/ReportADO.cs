@@ -30,7 +30,7 @@ namespace Datos
             firestoredb = FirestoreDb.Create(projectId);
         }
 
-        public async Task<List<Report>> GetAllReportsAsync()
+        public async Task<List<Report>> GetAllReports()
         {
             CollectionReference collection = firestoredb.Collection(collectionName);
             QuerySnapshot allReports = await collection.GetSnapshotAsync();
@@ -47,7 +47,7 @@ namespace Datos
             return reportsList;
         }
 
-        public async Task<string> GetAddressFromCoordinatesAsync(double latitude, double longitude)
+        public async Task<string> GetAddressFromCoordinates(double latitude, double longitude)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -86,9 +86,11 @@ namespace Datos
             }
         }
 
-        public void UpdateReportStatus(string status)
+        public async void UpdateReportStatus(string documentId, string newStatus)
         {
-
+            DocumentReference cityRef = firestoredb
+                .Collection(collectionName).Document(documentId);
+            await cityRef.UpdateAsync("status", newStatus);
         }
 
         public void GetReportsByStatus(string status)

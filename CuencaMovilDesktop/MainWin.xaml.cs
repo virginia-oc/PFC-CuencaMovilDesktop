@@ -92,7 +92,8 @@ namespace CuencaMovilDesktop
 
         private void printReportClick(object sender, RoutedEventArgs e)
         {
-
+            panel.Children.Clear();
+            panel.Children.Add(new UserControlPrintReport());
         }
 
         private void addClubClick(object sender, RoutedEventArgs e)
@@ -104,12 +105,13 @@ namespace CuencaMovilDesktop
         private void editClubClick(object sender, RoutedEventArgs e)
         {
             panel.Children.Clear();
-            panel.Children.Add(new UserControlClubForm());
+            panel.Children.Add(new UserControlClubsList(this));
         }
       
         private void newBroadcastClick(object sender, RoutedEventArgs e)
         {
-
+            panel.Children.Clear();
+            panel.Children.Add(new UserControlNewBroadcast());
         }
 
         private void ShowClubsClick(object sender, RoutedEventArgs e)
@@ -121,8 +123,6 @@ namespace CuencaMovilDesktop
         public void ClearPanel()
         {
             panel.Children.Clear();
-        }
-
-        
+        }      
     }
 }

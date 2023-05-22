@@ -3,6 +3,7 @@ using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -63,6 +64,16 @@ namespace Entidades
             Website = website;
             Phone = phone;
             PhotoURLs = new List<string>(photos);
+        }
+
+        public bool Contain(string text)
+        {
+            if (this.Name.ToLower().Contains(text.ToLower()) ||
+                this.Description.ToLower().Contains(text.ToLower()) ||
+                this.Category.ToLower().Contains(text.ToLower()))
+                return true;
+            else
+                return false;
         }
     }
 }

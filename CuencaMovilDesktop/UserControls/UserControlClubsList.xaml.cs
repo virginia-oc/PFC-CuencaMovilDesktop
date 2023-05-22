@@ -35,5 +35,10 @@ namespace CuencaMovilDesktop.UserControls
         {            
             dgClubs.DataContext = allClubsList;
         }
+
+        private void tbBuscador_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            dgClubs.DataContext = Gestion.FilterClubsByText(allClubsList, tbBuscador.Text);
+        }
     }
 }
